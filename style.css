@@ -1,0 +1,30 @@
+/* Team OS — global base styles
+   The app's component styles are inline (by design of the build system),
+   this file covers resets, fonts and keyframe animations shared across pages. */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #FBFAF7;
+  font-family: 'Onest', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: #FF5A1F; text-decoration: none; }
+a:hover { color: #E14A12; }
+::selection { background: #FFD9C6; color: #15151A; }
+
+.tos-scroll::-webkit-scrollbar { height: 0; width: 0; }
+.tos-scroll { scrollbar-width: none; }
+
+@keyframes tosFloat  { 0%,100% { transform: translateY(0); }   50% { transform: translateY(-12px); } }
+@keyframes tosFloat2 { 0%,100% { transform: translateY(0); }   50% { transform: translateY(10px); } }
+@keyframes tosSpin   { to { transform: rotate(360deg); } }
+@keyframes tosPulse  { 0%,100% { opacity: .5; transform: scale(1); } 50% { opacity: .9; transform: scale(1.06); } }
+@keyframes tosDrift  { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(34px,-24px) scale(1.1); } }
+@keyframes tosDrift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-30px,26px) scale(1.08); } }
+@keyframes tosTwinkle{ 0%,100% { opacity: .15; transform: scale(.7); } 50% { opacity: .95; transform: scale(1.25); } }
+@keyframes tosShimmer{ 0% { transform: translateX(-160%) skewX(-18deg); } 55%,100% { transform: translateX(360%) skewX(-18deg); } }
+@keyframes tosSway   { 0%,100% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } }
+@keyframes tosBreathe{ 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-4px) scale(1.05); } }
